@@ -1,0 +1,46 @@
+fun main() {
+calculadora()
+}
+
+fun calculadora(){
+	println("Bem vindo à calculadora")
+	println("Nós podemos realizar operações de + - * / entre dois números :)")
+	println("Por favor digite o primeiro número que deseja utilizar:")
+	var a:Float?
+	a = 3.toFloat()
+    while(a == null){
+        println("Por favor digite um número")
+        //Pede um novo Input
+    }
+    println(a.toString())
+    println("Você escolheu o número " + a.toString())
+    println("Por favor digite o segundo número que deseja utilizar:")
+    var b:Float?
+    b = 2.toFloat()
+    while(b == null){
+        println("Por favor digite um número")
+        //Pede um novo Input
+    }
+    println(b.toString())
+    println("Você escolheu o número " + b.toString())
+    println("Escolha a operação que deseja executar:")
+    println("1 = Adição")
+    println("2 = Subtração")
+    println("3 = Multiplicação")
+    println("4 = Divisão")
+    var c:Int?
+    c = 3
+    while(c == null || c < 1 || c > 4){
+        println("Por favor digite um número válido")
+        //Pede um novo Input
+    }
+    var result :Float
+    result = 3.toFloat()
+    when(c){
+        1 -> result = a.plus(b)
+        2 -> result = a.minus(b)
+        3 -> result = a.times(b)
+        4 -> result = a.div(b)
+    }
+    println("Muito obrigado, seu resultado é: " + result.toString())
+}
